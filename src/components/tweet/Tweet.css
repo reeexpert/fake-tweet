@@ -270,7 +270,8 @@
 
 .twemoji-sm, .twemoji-bg {
     position: relative;
-    top: 4px;
+    top: -4px;
+    display: inline;
 }
 
 .twemoji-sm {
