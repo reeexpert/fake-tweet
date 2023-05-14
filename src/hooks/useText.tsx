@@ -35,7 +35,7 @@ function handleMention(key: string, result: string[]) {
   return (
     <span key={key}>
       {' '}
-      <span className="fake-link mention">@{result[1]}</span>
+      <span className="fake-link mention"> <a target="_blank" rel="noopener noreferrer" href={'https://twitter.com/' + result[1]}>@{result[1]}</a></span>
     </span>
   );
 }
@@ -44,7 +44,7 @@ function handleHashtag(key: string, result: string[]) {
   return (
     <span key={key}>
       {' '}
-      <span className="fake-link mention"> #{result[1]}</span>
+      <span className="fake-link mention"> <a target="_blank" rel="noopener noreferrer" href={'https://twitter.com/hashtag/' + result[1]}> #{result[1]}</a></span>
     </span>
   );
 }
@@ -53,7 +53,7 @@ function handleUrl(key: string, result: string[]) {
   return (
     <span key={key}>
       {' '}
-      <span className="fake-link mention"> {result[1]}</span>
+      <span className="fake-link mention"> <a target="_blank" rel="noopener noreferrer" href={result[1]}> {result[1]}</a></span>
     </span>
   );
 }
