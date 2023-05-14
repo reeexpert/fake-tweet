@@ -11,7 +11,7 @@ function Content({ config }: { config: TweetConfig }) {
       {config.replies.length > 0 ?
       <div className='user-nickname text-sm py-2'>
             Replying to {config.replies.map((reply) => (
-                   <span className="fake-link mention"><a href={'https://twitter.com/' + reply}> {reply}</a></span>
+                   <span className="fake-link mention"><a target="_blank" rel="noopener noreferrer" href={'https://twitter.com/' + reply}> {reply}</a></span>
 
             ))}
 
