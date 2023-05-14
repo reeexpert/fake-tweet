@@ -8,6 +8,16 @@ function Content({ config }: { config: TweetConfig }) {
 
   return (
     <div className="tweet-content">
+      {config.replies.length > 0 ?
+      <div className='user-nickname text-sm py-2'>
+            Replying to {config.replies.map((reply) => (
+                   <span className="fake-link mention"><a href={'https://twitter.com/' + reply}> {reply}</a></span>
+
+            ))}
+
+        </div>
+        : null
+        }
       {text && <div className="txt">{text}</div>}
       <ImagesContainer config={config} />
     </div>
