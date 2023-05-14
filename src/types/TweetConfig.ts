@@ -10,6 +10,7 @@ type TweetConfig = {
   retweets: number;
   quotedTweets: number;
   likes: number;
+  replies: string[];
 };
 
 export default TweetConfig;
