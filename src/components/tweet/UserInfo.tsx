@@ -9,11 +9,14 @@ function UserInfo({ config }: { config: TweetConfig }) {
   return (
     <div className="user-info">
       <div className="avatar-container">
-        <img
-          className="avatar"
-          src={config.user.avatar}
-          alt={config.user.name + ' avatar'}
-        />
+        <img 
+            className="avatar"
+            src={config.user.avatar}
+            onError={({ currentTarget }) => {
+              currentTarget.onerror = null; // prevents looping
+              currentTarget.src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png";
+            }}/>
+
       </div>
       <div className="user-info-right">
         <div className="drop-button">
