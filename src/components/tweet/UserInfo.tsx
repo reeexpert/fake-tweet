@@ -4,6 +4,7 @@ import DropIcon from '../icons/DropIcon';
 import VerifiedIcon from '../icons/VerifiedIcon';
 import LockIcon from '../icons/LockIcon';
 import Twemoji from 'react-twemoji';
+import Default from '../../../default.png'
 
 function UserInfo({ config }: { config: TweetConfig }) {
   return (
@@ -14,7 +15,7 @@ function UserInfo({ config }: { config: TweetConfig }) {
             src={config.user.avatar}
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
-              currentTarget.src="https://media.idownloadblog.com/wp-content/uploads/2017/03/Twitter-new-2017-avatar-001.png";
+              currentTarget.src={Default};
             }}/>
 
       </div>
